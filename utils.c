@@ -1,16 +1,5 @@
 #include "utils.h"
 
-int* INT(const int const_int) {
-	int *int_ptr = (int*)malloc(sizeof(int));
-	memcpy(int_ptr,&const_int, sizeof(int));
-	return int_ptr;
-}
-
-char* STR(const char* const_str) {
-	char *str = (char*)calloc(strlen(const_str) + 1,sizeof(char));
-	return strcpy(str, const_str);
-}
-
 int _default_compare(void *k1, void *k2, unsigned key_size) {
 	unsigned char* k1_ptr = (char*)k1;
 	unsigned char* k2_ptr = (char*)k2;
